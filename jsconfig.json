@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es6"
+    },
+    "include": [
+        "src/**/*.js",
+        "src/**/*.jsx"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
