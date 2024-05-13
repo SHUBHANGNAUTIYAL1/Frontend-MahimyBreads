@@ -15,7 +15,7 @@ function Contactform() {
 const handleSubmit=async()=>{
 
     try{
-       await axios.post("https://mahimy-backend.onrender.com/api/email/send-email",
+       await axios.post("https://backend-mahimybreads.onrender.com/api/email/send-email",
        {First:FirstName,
         Last:LastName,
         Phone:phone,
