@@ -70,7 +70,7 @@ function Story() {
     <div className="w-full   bg-[#114232] flex  justify-center items-center px-5 lg:px-20 py-5 lg:py-20">
       <div className="w-full   flex flex-col justify-center items-center gap-6 md:gap-16">
         <h1 className="gabarito font-semibold  text-[50px] md:text-[74.38px] text-white">Our Story</h1>
-        <div  className="  flex flex-col md:flex-row  justify-between gap-12 md:gap-28">
+        <div  className="  flex flex-col md:flex-row  justify-between gap-6 md:gap-28">
             {
                 banners.map((banner,index)=>(
                     <div ref={(el) => (elementsRef.current[index] = el)} className="flex md:w-[200px] lg:w-[250px] flex-col  relative transition-all duration-500 opacity-0 " key={index}>

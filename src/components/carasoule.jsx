@@ -59,6 +59,7 @@ function Carousel() {
     const settings = {
       dots: false,
       infinite: true,
+      
       slidesToShow:isMobile ? 1 : 3,
       slidesToScroll: 1,
       autoplay: true,
@@ -66,12 +67,14 @@ function Carousel() {
       autoplaySpeed:20,
       cssEase: "linear",
       ltr: true,
+      arrows: false
       
       
       
     };
     const settings2 = {
       dots: false,
+      
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -79,12 +82,13 @@ function Carousel() {
       speed: 1000,
       autoplaySpeed: 20,
       cssEase: "linear",
-      rtl: true
+      rtl: true,
+      arrows: false
       
       
     };
   return (
-    <div className="h-full  w-[99vw] ">
+    <div className="h-full  w-[99vw] px-2 ">
       <div className="slider-container h-full w-full z-50 gap-2   flex  flex-col items-center ">
         <Slider  {...settings} className="w-full md:w-[95%] flex justify-between  ">
           {
@@ -113,7 +117,7 @@ function Carousel() {
           {
             Banners.map((banner,index)=>(
               <div className="p-10">
-              <div className="  bg-white p-10 flex flex-col gap-2 border-2 border-[#F2D784] " key={index}  >
+              <div className="  bg-white p-5 md:p-10 flex flex-col gap-2 border-2 border-[#F2D784] " key={index}  >
                 <h1 className="gabarito text-[14px]">{banner.content}</h1>
                 <div className="w-full flex items-center">
                   <img src={banner.img} alt="" />

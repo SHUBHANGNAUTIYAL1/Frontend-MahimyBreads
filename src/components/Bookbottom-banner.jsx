@@ -8,6 +8,9 @@ import bead2 from '../assets/bead2.png'
 import bead3 from '../assets/bead3.png'
 import bead4 from '../assets/bead4.png'
 import bead5 from '../assets/bead5.png'
+import stick1 from "../assets/stick1.png"
+import stick2 from "../assets/stick2.png"
+import stick3 from "../assets/stick3.png"
 
 function Bookbottom_banner() {
     const navigate = useNavigate();
@@ -47,7 +50,7 @@ function Bookbottom_banner() {
     }, []);
 
   return (
-    <div className="w-full bg-[#FFF0E7]  flex  justify-center items-center px-0 md:px-20 py-10 md:py-20">
+    <div className="w-full bg-[#F9FFE7]  flex  justify-center items-center px-0 md:px-20 py-10 md:py-20 relative">
     <div className="w-full md:w-[90%]  flex flex-col md:flex-row justify-between items-center">
     <div className=' w-full md:w-[600px] h-[500px] md:h-[450px] relative'>
             <img ref={(el) => imagesRef.current.push(el)} src={bead1} alt="" className='absolute top-6 left-[15%] md:left-[20%]   transition-all duration-500 opacity-0' />
@@ -57,13 +60,16 @@ function Bookbottom_banner() {
             <img ref={(el) => imagesRef.current.push(el)} src={bead5} alt="" className='absolute left-[26%]  top-[65%] md:left-[30%] transition-all duration-500 opacity-0' />
             <img ref={(el) => imagesRef.current.push(el)} src={bead1} alt="" className='absolute left-[26%]  top-[85%] md:left-[28%] transition-all duration-500 opacity-0' />
         </div>
-      <div className='w-full md:w-[50%] flex flex-col gap-6 '>
-        <h1 className=" gabarito text-[50px] md:text-[74.38px]">Have questions?</h1>
+      <div className='w-full md:w-[50%] flex flex-col p-4 md:p-0 gap-6 '>
+        <h1 className=" gabarito text-[45px] md:text-[74.38px]">Have questions?</h1>
         <p className=" gabarito text-[22px] md:text-[32px]">There’s always time between batches to help! Reach out to us with any questions or concerns.</p>
         
         <button  onClick={handleSubmit} className='px-10 w-full lg:w-[70%] md:px-5 text-[20px] md:text-[32px] gabarito py-2 border-2 border-black rounded-full flex justify-center items-center gap-4 ' >Contact Us<img src={arrow}  alt="" /></button>
         
       </div>
+      <img src={stick1} alt="" className="absolute hidden md:block left-0 top-[60%]" />
+      <img src={stick2} alt="" className="absolute  hidden md:block top-0 left-[40%]"/>
+      <img src={stick3} alt="" className="absolute hidden md:block right-0 bottom-0"/>
     </div>
 
   </div>

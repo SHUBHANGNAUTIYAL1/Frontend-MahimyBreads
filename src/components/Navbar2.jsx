@@ -49,8 +49,8 @@ export const Navbar2 = () => {
       {showMenu && (
         <div className="  md:hidden fixed top-0 left-0 w-[85vw] h-[100%]  backdrop-blur-[0.8rem] flex flex-col gap-10 py-10 items-end pr-12  bg-gradient-to-l from-[#230c02] to-[#221609] text-white z-[50] font-semibold text-[24px] ">
           <X className=" text-2xl cursor-pointer " onClick={toggleMenu} />
-          <Link to="/" onClick={toggleMenu} className="hover:text-gray-300">About Us</Link>
-          <Link to="" onClick={toggleMenu} className="hover:text-gray-300">Where to Buy</Link>
+          <Link to="/about" onClick={toggleMenu} className="hover:text-gray-300">About Us</Link>
+          <Link to="/book" onClick={toggleMenu} className="hover:text-gray-300">Where to Buy</Link>
          
           <Link to="/contact" onClick={toggleMenu}className="hover:text-gray-300">Contact Us</Link>
           
