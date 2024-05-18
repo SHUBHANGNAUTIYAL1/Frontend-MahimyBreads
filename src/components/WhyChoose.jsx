@@ -42,21 +42,22 @@ function WhyChoose() {
                     <img src={leftleaf} alt="" />
                     <img src={rightleaf} alt="" />
                     </div>
-                    <p><span className='font-bold'>100% Eggless :</span> Our bread is crafted without the use of any eggs,making it suitable for vegtarians and those with dietary restrictions.</p>
+                    <p><span className='font-bold'>Superior nutritional ingredients :</span>  Our millets, coconut and olive oil are chosen with the utmost care and are baked with wheat.</p>
                 </div>
                 <div className="flex gap-4">
                     <div className="flex items-center justify-center">
                         <img src={leftleaf} alt="" />
                         <img src={rightleaf} alt="" />
                     </div>
-                    <p><span className='font-bold'>Unbeatable Quality :</span> Our bread is crafted using only the finest ingredients, ensuring superior taste and texture.</p>
+                    <p><span className='font-bold'>Advanced automation technology  :</span> We are first of a kind with fully automated baking machinery ensuring extra hygiene.</p>
                     </div>
                     <div className="flex gap-4">
                     <div className="flex items-center justify-center">
                             <img src={leftleaf} alt="" />
                             <img src={rightleaf} alt="" />
                         </div>
-                        <p><span className='font-bold'>Wide Variety :</span> From traditional favourite to unique artisanal creations, we offer a diverse selection to satisfy every craving.</p>
+                        <p><span className='font-bold'>Hygienic preparation :</span>  We clean our machinery daily and our breads are baked in small batches to retain the freshness and to avoid any wastage.
+</p>
                     
                     </div>  
                     <div className="flex gap-4">
@@ -64,7 +65,7 @@ function WhyChoose() {
                             <img src={leftleaf} alt="" />
                             <img src={rightleaf} alt="" />
                         </div>
-                        <p><span className='font-bold'>Health Consciousness :</span> We prioritize your well-beign by using wholesome ingredients and avoiding artificial additives of preservatives.</p>
+                        <p><span className='font-bold'>Zero preservatives & additives :</span> Our breads have zero additives and preservatives. We take our customers well being to heart.</p>
                         
                     </div>
                     <div className="flex gap-4">

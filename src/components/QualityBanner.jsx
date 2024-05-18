@@ -8,17 +8,17 @@ import "../App.css"
 const banners = [
     {
         title:'Nutrition Rich',
-        content:'Nutrition rich delights created to nourish your taste buds',
+        content:' Our breads use natural ingredients and farm fresh millets packed with nutritional benefits',
         img:Nutrition
     },
     {
         title:'100% Fresh',
-        content:'Nutrition rich delights created to nourish your taste buds',
+        content:'Our breads are baked with finest coconut milk and farm fresh millets. We make it a point to bake small batches and keep our stocks fresh',
         img:fresh
     },
     {
-        title:'Freshly Baked',
-        content:'Nutrition rich delights created to nourish your taste buds',
+        title:'Zero Additive',
+        content:' Our company follows the zero preservatives and additives rule strictly. Our products are entirely natural.',
         img:baked
     }
 ]
@@ -29,12 +29,12 @@ function QualityBanner() {
         <div className=' gabarito w-full md:w-[90%]  block md:flex justify-between items-center gap-20 '>
 
            { banners.map((banner,index)=>(
-            <div className={`w-full flex items-baseline mt-6 md:mt-0 justify-center ${index>0?'md:justify-end':''}`}>
-                <div key={index} className={`flex md:gap-6 items-center justify-center w-[90%] ${index>1?'gap-4 ':'gap-6'}`}>
-                    <div className=''>
-                        <img src={banner.img} alt="" className='md:w-[100px] md:h-[100px]' />
+            <div className={`w-full flex items-baseline mt-6  lg:h-[200px] md:mt-0 justify-center ${index>0?'md:justify-end':''}`}>
+                <div key={index} className={`flex md:gap-6  justify-center w-[90%] ${index>1?' gap-2 md:gap-4 ':'md:gap-6 gap-8'}`}  >
+                    <div className=' md:h-[100px] mt-2'>
+                        <img src={banner.img} alt="" className={`md:w-[150px] md:h-[100px] ${index<1?'w-[70px] md:w-[100px] md:h-[80px]':''}`} />
                     </div>
-                    <div className=' flex flex-col gap-4 '>
+                    <div className=' flex flex-col gap-4  '>
                         <h1 className='text-[24px] text-start font-bold'>{banner.title}</h1>
                         <p className={`${index>1?'w-full':'w-[70%]' } text-[16px] `}>{banner.content}</p>
                     </div>
