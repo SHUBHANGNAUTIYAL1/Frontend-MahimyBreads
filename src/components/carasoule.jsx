@@ -8,31 +8,61 @@ import '../App.css'
 
 const Banners=[
   {
-   content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. ',
+   content:'Although a bit on the pricier side, the breads deliver the quality. ',
    name:'Saravana',
    location:'Banglore',
    img:human
   },
   {
-    content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. ',
+    content:'I was never a fan of bread made from wheat due to their bland taste, but the one with honey completely changed my mind !',
     name:'Saravana',
     location:'Banglore',
     img:human
    },
    {
-    content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. ',
+    content:'The coconut milk bread has my heart ! I never knew my favourite ingredient could be used in breads.',
     name:'Saravana',
     location:'Banglore',
     img:human
    },
    {
-    content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. ',
+    content:'If it’s healthy then the taste is usually compromised. But the bread from Mahimyfoods is nutritious and tastes great ! ',
     name:'Saravana',
     location:'Banglore',
     img:human
    },
    {
-    content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. ',
+    content:'I never knew anything this tasty could be healthy!',
+    name:'Saravana',
+    location:'Banglore',
+    img:human
+   },
+   {
+    content:'As a bread lover and a gym rat, I restricted myself from consuming bread. But Mahimyfoods changed my perspective and now I can enjoy a slice of bread every once in a while without feeling guilty about it.',
+    name:'Saravana',
+    location:'Banglore',
+    img:human
+   },
+   {
+    content:'I used to completely avoid breads, but the wheat bread with honey has changed my perspective and now I can’t do without eating it at least thrice a week !',
+    name:'Saravana',
+    location:'Banglore',
+    img:human
+   },
+   {
+    content:'I have tried multiple nutritious bread brands, but Mahimyfoods seems to be my favourite. Their process of baking is transparent and extremely hygienic.',
+    name:'Saravana',
+    location:'Banglore',
+    img:human
+   },
+   {
+    content:'Given my busy work schedule, Mahimyfood breads have come to my rescue. They indeed pack a punch of nutrition in very loaf of bread. ',
+    name:'Saravana',
+    location:'Banglore',
+    img:human
+   },
+   {
+    content:'Indha wheat bread laam sweet ah ve irukaadhu, but ivangal oda wheat bread with honey romba nalla irukku. Saapta wheat bread nu eh solla maateenga !',
     name:'Saravana',
     location:'Banglore',
     img:human
@@ -41,11 +71,17 @@ const Banners=[
 ]
 
 function Carousel() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [slidesToShow, setSlidesToShow] = useState(3);
 
   useEffect(() => {
     function handleResize() {
-      setIsMobile(window.innerWidth <= 768);
+      if (window.innerWidth <= 600) {
+        setSlidesToShow(1);
+      } else if (window.innerWidth <= 1000) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(3);
+      }
     }
 
     window.addEventListener('resize', handleResize);
@@ -56,27 +92,24 @@ function Carousel() {
     // Clean up event listener on component unmount
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-    const settings = {
-      dots: false,
-      infinite: true,
-      
-      slidesToShow:isMobile ? 1 : 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      speed: 2000,
-      autoplaySpeed:20,
-      cssEase: "linear",
-      ltr: true,
-      arrows: false
-      
-      
-      
-    };
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 20,
+    cssEase: "linear",
+    ltr: true,
+    arrows: false
+  };
     const settings2 = {
       dots: false,
       
       infinite: true,
-      slidesToShow: 3,
+      slidesToShow: slidesToShow,
       slidesToScroll: 1,
       autoplay: true,
       speed: 1000,
@@ -95,7 +128,7 @@ function Carousel() {
             Banners.map((banner,index)=>(
 
              <div className="p-10 ">
-              <div className="  bg-white  p-5 md:p-10 flex flex-col gap-2 border-2 border-[#F2D784] " key={index}  >
+              <div className="  bg-white h-[300px] p-5 md:p-10 flex justify-between flex-col gap-2 border-2 border-[#F2D784] " key={index}  >
                 <h1 className="gabarito text-[14px]">{banner.content}</h1>
                 <div className="w-full flex items-center">
                   <img src={banner.img} alt="" />
@@ -117,7 +150,7 @@ function Carousel() {
           {
             Banners.map((banner,index)=>(
               <div className="p-10">
-              <div className="  bg-white p-5 md:p-10 flex flex-col gap-2 border-2 border-[#F2D784] " key={index}  >
+              <div className="  bg-white  justify-between h-[300px] p-5 md:p-10 flex flex-col gap-2 border-2 border-[#F2D784] " key={index}  >
                 <h1 className="gabarito text-[14px]">{banner.content}</h1>
                 <div className="w-full flex items-center">
                   <img src={banner.img} alt="" />
